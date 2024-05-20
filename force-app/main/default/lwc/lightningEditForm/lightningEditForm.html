@@ -1,0 +1,15 @@
+<template>
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+    <lightning-record-edit-form id="recordViewForm"
+                record-id={recordId}
+                object-api-name="Contact">
+        <lightning-input-field field-name={FIRSTNAME}></lightning-input-field>
+        <lightning-output-field field-name={LASTNAME}></lightning-output-field>
+        <lightning-input-field field-name={TITLEFIELD}></lightning-input-field>
+        <lightning-input-field field-name={EMAILFIELD}></lightning-input-field>
+
+        <!-- submit -->
+        <lightning-button type="submit" label="Update record"></lightning-button>
+    </lightning-record-edit-form>
+</lightning-card>
+</template>

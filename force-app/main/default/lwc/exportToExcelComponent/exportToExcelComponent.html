@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Accounts List which can be export">
+        <lightning-input type="toggle" label="Switch to Non Tabular" checked={checked} onchange={changeToggle} ></lightning-input>
+        <template if:true={checked}>
+            <div class="slds-m-around--small">
+                <lightning-button label="Export to Excel" title="Export to Excel" onclick={handleClick} variant="brand"></lightning-button>
+            </div>
+            <div>
+                <lightning-datatable data={accountsData} columns={accColumns} key-field="Id"></lightning-datatable>
+            </div>
+        </template>
+        <template if:false={checked}>
+            <div class="slds-grid slds-gutters">
+                <template for:each={accountsData} for:item="account">
+                    <div class="slds-col" key={accounts}>
+                        <span>Account Name : {account.Name}</span>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>

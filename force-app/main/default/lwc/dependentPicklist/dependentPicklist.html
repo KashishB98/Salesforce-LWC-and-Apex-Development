@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Dependent Picklist">
+        <div><lightning-combobox options={accountOptions} value={accValue}
+                onchange={handleAccountChange}></lightning-combobox></div>
+        <div><lightning-combobox options={contactsOptions} value={contactsValue}
+                onchange={handleContactsChange}></lightning-combobox>
+        </div>
+    </lightning-card>
+</template>

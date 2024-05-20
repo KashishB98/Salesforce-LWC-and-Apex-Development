@@ -1,0 +1,15 @@
+<template>
+<lightning-card  variant="Narrow"  title="Case Form" icon-name="standard:account">
+    <lightning-input type="tel" variant="standard" name="Phone" label="Phone" placeholder="type here..." value = {phoneVal}></lightning-input>
+    <lightning-button variant="brand" label="Search" title="Search" onclick={handleClick}></lightning-button>
+    <template if:true={ifContact}>
+        <lightning-record-edit-form id="recordViewForm"
+                    object-api-name="Case">
+            <lightning-input-field field-name="Status"></lightning-input-field>
+            <lightning-input-field field-name="Origin"></lightning-input-field>
+            <!-- submit -->
+            <lightning-button type="submit" label="Create record"></lightning-button>
+        </lightning-record-edit-form>
+    </template>
+</lightning-card>
+</template>

@@ -1,0 +1,7 @@
+<template>
+<lightning-card  variant="Narrow"  title="Subcriber" icon-name="standard:account">
+    <template if:true={contactsData}>
+            <lightning-datatable data={contactsData} columns={columns} key-field="Id" onrowselection={getSelectedName}></lightning-datatable>
+        </template>
+</lightning-card>
+</template>

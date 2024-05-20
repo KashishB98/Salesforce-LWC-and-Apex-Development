@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Case Hierarchies">
+        <div class="slds-p-around_medium lgc-bg">
+            <template if:true={isHierarchies}>
+                <lightning-tree-grid columns={gridColumns} data={gridData} key-field="Id" expanded-rows={expandedRows}
+                    ontoggle={handleOnToggle}>
+                </lightning-tree-grid>
+            </template>
+            <template if:false={isHierarchies}>
+                <div>Case has no children</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

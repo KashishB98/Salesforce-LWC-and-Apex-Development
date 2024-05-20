@@ -1,0 +1,13 @@
+<template>
+<lightning-card  variant="Narrow"  title="Parent Component">
+    <lightning-input 
+    type="text" 
+    variant="standard" 
+    name="Message" 
+    label="Message" 
+    placeholder="type here..." 
+    value = {message} 
+    onchange={handleChange}></lightning-input>
+</lightning-card>
+<c-child-comp message-from-parent = {message}></c-child-comp>
+</template>

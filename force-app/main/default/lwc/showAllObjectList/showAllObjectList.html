@@ -1,0 +1,15 @@
+<template>
+<lightning-card  variant="Narrow"  title="Object List" icon-name="standard:account">
+</lightning-card>
+<div style="height:300px">
+<lightning-datatable
+    key-field="Id"
+    data={dataList}
+    enable-infinite-loading
+    onloadmore={loadMoreData}
+    show-row-number-column
+    hide-checkbox-column
+    columns={columnsList}>
+</lightning-datatable>
+</div>
+</template>
